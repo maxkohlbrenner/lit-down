@@ -23,7 +23,7 @@ def main():
     if not path.exists(literature_dir):
         mkdir(literature_dir)
 
-    
+
     lit_df = pd.read_csv(literature_path)
     nrows = lit_df.shape[0]
     for i, (index, row) in enumerate(lit_df.iterrows()):
@@ -37,6 +37,8 @@ def main():
                 print('... error: {}'.format(e))
         else:
             print('{} already exists, skip'.format(name).format(name))
+
+    print('...finished')
 
 if __name__ == "__main__":
     main()
